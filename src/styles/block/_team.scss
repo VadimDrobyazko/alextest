@@ -1,0 +1,353 @@
+.team {
+  position: relative;
+
+  &__wrapper {
+    @include grid;
+
+    row-gap: 71px;
+
+    @include onMobile {
+      row-gap: 40px;
+    }
+  }
+
+  &__cross {
+    position: absolute;
+
+    width: 148px;
+    height: 148px;
+
+    @include onMobile {
+      width: 63px;
+      height: 63px;
+    }
+
+    &--first {
+      top: 100px;
+      right: 317px;
+
+      @include onMobile {
+        top: 45px;
+        right: 32px;
+      }
+
+      @include onTable {
+        top: 50px;
+        right: 37px;
+      }
+    }
+
+    &--last {
+      left: 115px;
+      bottom: 62px;
+
+      @include onMobile {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    grid-column: 1 / 4;
+    grid-row: 1;
+
+    @include onMobile {
+      grid-column: 1 / 4;
+    }
+
+    @include onTable {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+
+    grid-column: 4 / 9;
+    grid-row: 2;
+
+    width: 100%;
+    height: 100%;
+    max-width: 633px;
+
+    border-radius: 61px;
+    background-color: $color-team;
+
+    @include onMobile {
+      grid-row: 3;
+      grid-column: 1 / 7;
+
+      max-height: 38px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    text-align: center;
+
+    color: $color-title;
+    border-radius: 61px;
+
+    padding: 19px 0;
+
+    &--active {
+      background-color: $color-pink;
+      color: $color-white;
+    }
+
+    @include onMobile {
+      gap: 7px;
+
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+
+    fill: #09121f;
+
+    @include onMobile {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    grid-column: 1 / 4;
+    grid-row: 3;
+
+    @include onMobile {
+      grid-row: 2;
+
+      grid-column: 1 / 7;
+
+      margin: -10px 0 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 39px;
+
+    color: $color-title;
+
+    @include onMobile {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__paragraph {
+    font-size: 24px;
+    line-height: 35px;
+
+    color: $color-text;
+
+    @include onMobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__swiper {
+    display: none;
+    gap: 20px;
+
+    width: 100%;
+
+    transition: transform 0.3s ease-in-out;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__swp {
+    grid-column: 4 / 13;
+    grid-row: 3;
+
+    width: 100%;
+
+    max-width: 1330px;
+
+    overflow: hidden;
+
+    @include onMobile {
+      grid-row: 4;
+
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    max-height: 345px;
+    width: 100%;
+
+    border: 1px solid #9a9a9a;
+    border-radius: 5px;
+  }
+
+  &__photo {
+    object-fit: cover;
+    height: 100%;
+    min-width: 430px;
+  }
+
+  &__overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+
+    color: #ffffff;
+
+    text-align: center;
+    transition: opacity 0.3s ease;
+
+    &-name {
+      font-weight: 500;
+
+      font-size: 30px;
+      line-height: 34px;
+
+      padding: 0 0 10px;
+    }
+
+    &-position {
+      font-size: 24px;
+      line-height: 28px;
+
+      padding: 0 0 30px;
+    }
+
+    &-read {
+      background-color: $color-pink;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    grid-column: 4 / 13;
+    grid-row: 4;
+
+    @include onMobile {
+      grid-column: 1 / 7;
+      grid-row: 5;
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+    &-item {
+      height: 1px;
+      width: 100%;
+
+      background-color: $color-line;
+
+      &--active {
+        height: 7px;
+        background-color: $color-header-bg;
+      }
+    }
+
+    @include onTable {
+      max-width: 600px;
+    }
+
+    @include onDesktop {
+      max-width: 630px;
+    }
+
+    @include onDesign {
+      max-width: 1028px;
+    }
+  }
+
+  &__section {
+    display: flex;
+    gap: 30px;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background-color: $color-white;
+    border: 1px solid $color-border;
+
+    transition: all 0.3s ease-in-out;
+
+    &--active {
+      background-color: $color-section;
+
+      svg path {
+        fill-opacity: 1;
+      }
+    }
+
+    &--disable {
+      cursor: not-allowed;
+
+      svg path {
+        fill-opacity: 0.5;
+      }
+    }
+  }
+}
+
+.team__slide:hover .team__overlay {
+  opacity: 1;
+}

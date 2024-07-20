@@ -1,0 +1,42 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+  }
+
+  &__item:nth-child(4) .nav__link {
+    text-decoration: underline;
+  }
+
+  &__item {
+    @include onMobile {
+      &:not(:last-child) {
+        display: none;
+      }
+    }
+
+    @include onDesktop {
+      &:not(:nth-last-child(1)) {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-white;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-pink;
+    }
+  }
+}

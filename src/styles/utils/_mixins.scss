@@ -1,0 +1,34 @@
+@mixin onMobile {
+  @media (min-width: 375px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onTable {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onDesign {
+  @media (min-width: 1700px) {
+    @content;
+  }
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  @include onMobile {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}

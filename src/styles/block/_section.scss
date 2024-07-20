@@ -1,0 +1,47 @@
+.section {
+  padding: 120px 0;
+  background-color: $color-section;
+
+  overflow: hidden;
+
+  @include onMobile {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 62px;
+
+    color: $color-title;
+
+    @include onMobile {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__team {
+    background-color: $color-white;
+  }
+
+  &__contact {
+    background-color: $color-section;
+
+    padding: 120px 0 284px;
+
+    @include onMobile {
+      padding: 50px 0;
+    }
+  }
+
+  &__footer {
+    background-color: $color-header-bg;
+
+    padding: 120px 0 132px;
+
+    @include onMobile {
+      padding: 50px 0;
+    }
+  }
+}

@@ -1,3 +1,35 @@
 @import "utils/vars";
 @import "utils/reset";
 @import "utils/mixins";
+@import "utils/fonts";
+
+@import "block/section";
+
+@import "block/container";
+@import "block/nav";
+@import "block/header";
+@import "block/button";
+@import "block/partners";
+@import "block/team";
+@import "block/card";
+@import "block/contact";
+@import "block/footer";
+@import "block/mobile";
+@import "block/social";
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.body {
+  position: relative;
+  height: 100%;
+
+  &--open {
+    overflow: hidden;
+  }
+}

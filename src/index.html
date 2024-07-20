@@ -3,11 +3,1340 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testing</title>
     <link rel="stylesheet" href="./styles/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"
+      defer
+    ></script>
     <script src="scripts/main.js" defer></script>
+    <title>Testing</title>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="body">
+    <nav class="nav nav__mobile mobile" id="nav">
+      <div class="mobile__wrapper">
+        <div class="mobile__top">
+          <img
+            src="./images/logo/Logo.svg"
+            alt="Logo"
+            class="header__logo mobile__logo"
+          />
+
+          <a href="#home" class="mobile__link">
+            <svg
+              class="mobile__close"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_916)">
+                <path
+                  d="M16 14.1146L22.6 7.51465L24.4853 9.39998L17.8853 16L24.4853 22.6L22.6 24.4853L16 17.8853L9.39998 24.4853L7.51465 22.6L14.1146 16L7.51465 9.39998L9.39998 7.51465L16 14.1146Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_916">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="mobile__list">
+          <li class="mobile__item">
+            <a href="/" class="mobile__link">Home</a>
+          </li>
+
+          <li class="mobile__item">
+            <a href="#partners" class="mobile__link">Our Pertners</a>
+          </li>
+
+          <li class="mobile__item">
+            <a href="#team" class="mobile__link">Our Team</a>
+          </li>
+
+          <li class="mobile__item">
+            <a href="#contact" class="mobile__link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="mobile__social">
+          <ul class="mobile__social-list">
+            <li class="social__item">
+              <a
+                href="https://www.instagram.com/"
+                class="social__link"
+                target="_blank"
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_911)">
+                    <path
+                      d="M17.5 23.75H23.75V6.25H6.25V23.75H15V17.5H12.5V15H15V12.9325C15 11.2612 15.175 10.655 15.5 10.0437C15.8201 9.43898 16.315 8.94461 16.92 8.625C17.3975 8.36875 17.9912 8.215 19.0287 8.14875C19.44 8.1225 19.9725 8.155 20.6262 8.24875V10.6237H20C18.8538 10.6237 18.38 10.6775 18.0975 10.8288C17.9289 10.9154 17.7917 11.0527 17.705 11.2213C17.555 11.5038 17.5 11.7838 17.5 12.9313V15H20.625L20 17.5H17.5V23.75ZM5 3.75H25C25.3315 3.75 25.6495 3.8817 25.8839 4.11612C26.1183 4.35054 26.25 4.66848 26.25 5V25C26.25 25.3315 26.1183 25.6495 25.8839 25.8839C25.6495 26.1183 25.3315 26.25 25 26.25H5C4.66848 26.25 4.35054 26.1183 4.11612 25.8839C3.8817 25.6495 3.75 25.3315 3.75 25V5C3.75 4.66848 3.8817 4.35054 4.11612 4.11612C4.35054 3.8817 4.66848 3.75 5 3.75Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_911">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a
+                href="https://x.com/?lang=ru"
+                class="social__link"
+                target="_blank"
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_912)">
+                    <path
+                      d="M19.125 6.93752C18.175 6.93736 17.2629 7.31017 16.5849 7.97573C15.907 8.64129 15.5174 9.54639 15.5 10.4963L15.465 12.465C15.463 12.5707 15.4386 12.6748 15.3935 12.7704C15.3484 12.866 15.2836 12.9511 15.2033 13.0199C15.1231 13.0887 15.0292 13.1398 14.9278 13.1697C14.8264 13.1997 14.7198 13.2079 14.615 13.1938L12.6638 12.9288C10.0963 12.5788 7.63627 11.3963 5.27627 9.43002C4.52877 13.5675 5.98877 16.4338 9.50502 18.645L11.6888 20.0175C11.7925 20.0827 11.8787 20.1724 11.9398 20.2786C12.0009 20.3848 12.0351 20.5044 12.0393 20.6269C12.0435 20.7493 12.0176 20.871 11.9639 20.9811C11.9102 21.0913 11.8303 21.1866 11.7313 21.2588L9.74127 22.7125C10.925 22.7863 12.0488 22.7338 12.9813 22.5488C18.8788 21.3713 22.8 16.9338 22.8 9.61377C22.8 9.01627 21.535 6.93752 19.125 6.93752ZM13 10.45C13.0218 9.24508 13.3986 8.07336 14.0832 7.08155C14.7678 6.08974 15.7298 5.32192 16.8487 4.87423C17.9676 4.42654 19.1937 4.31887 20.3735 4.56471C21.5532 4.81054 22.6343 5.39895 23.4813 6.25627C24.37 6.25002 25.1263 6.47502 26.8175 5.45002C26.3988 7.50002 26.1925 8.39002 25.3 9.61377C25.3 19.1663 19.4288 23.8113 13.4713 25C9.38627 25.815 3.44627 24.4763 1.74377 22.6988C2.61127 22.6313 6.13627 22.2525 8.17377 20.7613C6.45002 19.625 -0.411226 15.5875 4.09752 4.73252C6.21377 7.20377 8.36002 8.88627 10.535 9.77877C11.9825 10.3725 12.3375 10.36 13.0013 10.4513L13 10.45Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_912">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a
+                href="https://www.linkedin.com/"
+                class="social__link"
+                target="_blank"
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_914)">
+                    <path
+                      d="M5 3.75H25C25.3315 3.75 25.6495 3.8817 25.8839 4.11612C26.1183 4.35054 26.25 4.66848 26.25 5V25C26.25 25.3315 26.1183 25.6495 25.8839 25.8839C25.6495 26.1183 25.3315 26.25 25 26.25H5C4.66848 26.25 4.35054 26.1183 4.11612 25.8839C3.8817 25.6495 3.75 25.3315 3.75 25V5C3.75 4.66848 3.8817 4.35054 4.11612 4.11612C4.35054 3.8817 4.66848 3.75 5 3.75ZM6.25 6.25V23.75H23.75V6.25H6.25ZM9.375 11.25C8.87772 11.25 8.40081 11.0525 8.04917 10.7008C7.69754 10.3492 7.5 9.87228 7.5 9.375C7.5 8.87772 7.69754 8.40081 8.04917 8.04917C8.40081 7.69754 8.87772 7.5 9.375 7.5C9.87228 7.5 10.3492 7.69754 10.7008 8.04917C11.0525 8.40081 11.25 8.87772 11.25 9.375C11.25 9.87228 11.0525 10.3492 10.7008 10.7008C10.3492 11.0525 9.87228 11.25 9.375 11.25ZM8.125 12.5H10.625V21.875H8.125V12.5ZM15 13.0375C15.73 12.3313 16.5825 11.875 17.5 11.875C20.0888 11.875 21.875 13.9738 21.875 16.5625V21.875H19.375V16.5625C19.375 15.9823 19.1445 15.4259 18.7343 15.0157C18.3241 14.6055 17.7677 14.375 17.1875 14.375C16.6073 14.375 16.0509 14.6055 15.6407 15.0157C15.2305 15.4259 15 15.9823 15 16.5625V21.875H12.5V12.5H15V13.0375Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_914">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a href="" class="social__link">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_913)">
+                    <path
+                      d="M15 11.25C14.0054 11.25 13.0516 11.6451 12.3483 12.3483C11.6451 13.0516 11.25 14.0054 11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15C18.75 14.0054 18.3549 13.0516 17.6517 12.3483C16.9484 11.6451 15.9946 11.25 15 11.25ZM15 8.75C16.6576 8.75 18.2473 9.40848 19.4194 10.5806C20.5915 11.7527 21.25 13.3424 21.25 15C21.25 16.6576 20.5915 18.2473 19.4194 19.4194C18.2473 20.5915 16.6576 21.25 15 21.25C13.3424 21.25 11.7527 20.5915 10.5806 19.4194C9.40848 18.2473 8.75 16.6576 8.75 15C8.75 13.3424 9.40848 11.7527 10.5806 10.5806C11.7527 9.40848 13.3424 8.75 15 8.75ZM23.125 8.4375C23.125 8.8519 22.9604 9.24933 22.6674 9.54235C22.3743 9.83538 21.9769 10 21.5625 10C21.1481 10 20.7507 9.83538 20.4576 9.54235C20.1646 9.24933 20 8.8519 20 8.4375C20 8.0231 20.1646 7.62567 20.4576 7.33265C20.7507 7.03962 21.1481 6.875 21.5625 6.875C21.9769 6.875 22.3743 7.03962 22.6674 7.33265C22.9604 7.62567 23.125 8.0231 23.125 8.4375ZM15 5C11.9075 5 11.4025 5.00875 9.96375 5.0725C8.98375 5.11875 8.32625 5.25 7.71625 5.4875C7.17375 5.6975 6.7825 5.94875 6.36625 6.36625C5.97501 6.74425 5.67419 7.20573 5.48625 7.71625C5.24875 8.32875 5.1175 8.985 5.0725 9.96375C5.0075 11.3438 5 11.8263 5 15C5 18.0925 5.00875 18.5975 5.0725 20.0362C5.11875 21.015 5.25 21.6737 5.48625 22.2825C5.69875 22.8263 5.94875 23.2175 6.36375 23.6325C6.785 24.0525 7.17625 24.3037 7.71375 24.5112C8.33125 24.75 8.98875 24.8825 9.96375 24.9275C11.3438 24.9925 11.8263 25 15 25C18.0925 25 18.5975 24.9912 20.0362 24.9275C21.0138 24.8812 21.6725 24.75 22.2825 24.5138C22.8237 24.3025 23.2175 24.0513 23.6325 23.6362C24.0538 23.215 24.305 22.8238 24.5125 22.2863C24.75 21.67 24.8825 21.0112 24.9275 20.0362C24.9925 18.6562 25 18.1737 25 15C25 11.9075 24.9912 11.4025 24.9275 9.96375C24.8812 8.98625 24.75 8.32625 24.5125 7.71625C24.3241 7.20625 24.0238 6.74495 23.6337 6.36625C23.2559 5.97481 22.7944 5.67396 22.2837 5.48625C21.6712 5.24875 21.0138 5.1175 20.0362 5.0725C18.6562 5.0075 18.1737 5 15 5ZM15 2.5C18.3962 2.5 18.82 2.5125 20.1525 2.575C21.4837 2.6375 22.39 2.84625 23.1875 3.15625C24.0125 3.47375 24.7075 3.90375 25.4025 4.5975C26.0381 5.22237 26.5299 5.97824 26.8438 6.8125C27.1525 7.60875 27.3625 8.51625 27.425 9.8475C27.4838 11.18 27.5 11.6038 27.5 15C27.5 18.3962 27.4875 18.82 27.425 20.1525C27.3625 21.4837 27.1525 22.39 26.8438 23.1875C26.5308 24.0222 26.0389 24.7783 25.4025 25.4025C24.7775 26.0379 24.0216 26.5297 23.1875 26.8438C22.3912 27.1525 21.4837 27.3625 20.1525 27.425C18.82 27.4838 18.3962 27.5 15 27.5C11.6038 27.5 11.18 27.4875 9.8475 27.425C8.51625 27.3625 7.61 27.1525 6.8125 26.8438C5.97791 26.5306 5.22191 26.0387 4.5975 25.4025C3.96176 24.7777 3.46991 24.0218 3.15625 23.1875C2.84625 22.3912 2.6375 21.4837 2.575 20.1525C2.51625 18.82 2.5 18.3962 2.5 15C2.5 11.6038 2.5125 11.18 2.575 9.8475C2.6375 8.515 2.84625 7.61 3.15625 6.8125C3.46905 5.97772 3.961 5.22165 4.5975 4.5975C5.22209 3.96154 5.97804 3.46966 6.8125 3.15625C7.61 2.84625 8.515 2.6375 9.8475 2.575C11.18 2.51625 11.6038 2.5 15 2.5Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_913">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <span class="social__policy mobile__social-policy"
+            >Privacy Policy</span
+          >
+        </div>
+      </div>
+
+      <picture class="mobile__picture">
+        <img
+          src="./images/menu/nav-mobile/background-mobile.png"
+          alt="frame"
+          class="mobile__background"
+        />
+      </picture>
+    </nav>
+
+    <header class="header">
+      <div class="container header__wrapper">
+        <div class="header__top">
+          <img src="./images/logo/Logo.svg" alt="Logo" class="header__logo" />
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" class="nav__link">Home</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#partners" class="nav__link">Our Pertners</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#team" class="nav__link">Our Team</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">Contact Us</a>
+              </li>
+
+              <li class="nav__item nav__open">
+                <a href="#nav" class="nav__link">
+                  <svg
+                    class="nav__img"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_1_465)">
+                      <path
+                        d="M4 5.33325H28V7.99992H4V5.33325ZM4 14.6666H28V17.3333H4V14.6666ZM4 23.9999H28V26.6666H4V23.9999Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_465">
+                        <rect width="32" height="32" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__middle">
+          <div class="header__middle-block">
+            <div class="header__middle-wrapper">
+              <h1
+                class="header__title"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
+                Email marceting for fast-growing startups
+              </h1>
+
+              <h3
+                class="header__subtitle"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ut
+                cursus dictum purus enim in in urna, suspendisse. Mauris, mollis
+                sed sed ac.
+              </h3>
+
+              <div
+                class="header__block"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+              >
+                <button class="button button__start">Start Now</button>
+
+                <button class="button button__read">Read More</button>
+              </div>
+            </div>
+
+            <picture class="header__middle-background">
+              <source
+                media="(max-width: 767px)"
+                srcset="./images/header/middle/middle-mobile.png"
+              />
+              <img
+                src="./images/header/middle/middle-desktop.png"
+                alt="bg"
+                class="header__img"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <picture class="header__background">
+        <source
+          media="(max-width: 767px)"
+          srcset="./images/header/background-mobile.png"
+        />
+        <img
+          src="./images/header/background.png"
+          alt="bg"
+          class="header__img"
+        />
+      </picture>
+    </header>
+
+    <main class="main">
+      <section
+        class="section section__partners partners"
+        id="partners"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
+        <div class="container">
+          <div
+            class="section__title partners__title"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            Our Partners
+          </div>
+
+          <div class="partners__wrapper">
+            <div
+              class="partners__section"
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
+              <div class="partners__block">
+                <img
+                  src="./images/partners/avatar.png"
+                  alt="People"
+                  class="partners__img"
+                />
+
+                <div class="partners__text">
+                  <div
+                    class="partners__name"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                  >
+                    Tom Dou
+                  </div>
+                  <div
+                    class="partners__position"
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                  >
+                    Front-End
+                  </div>
+                </div>
+              </div>
+
+              <p
+                class="partners__subtitle"
+                data-aos="fade-up"
+                data-aos-duration="1300"
+              >
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
+                pretium id viverra interdum nam odio ultricies. Diam leo, sed
+                neque dui pulvinar condimentum pretium. At pretium id viverra
+                interdum nam odio ultricies. Diam leo, sed neque dui pulvinar
+                condimentum pretium.”
+              </p>
+            </div>
+
+            <ul class="partners__list card">
+              <li
+                class="card__item"
+                data-name="Ihor Ivanov"
+                data-position="HR manager"
+                data-aos="fade-up"
+                data-aos-duration="900"
+              >
+                <img
+                  src="./images/partners/partners.png"
+                  alt="partners"
+                  class="card__img"
+                />
+              </li>
+
+              <li
+                class="card__item"
+                data-name="Andrey Petrov"
+                data-position="Backend developer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./images/partners/breck.png"
+                  alt="breck"
+                  class="card__img"
+                />
+              </li>
+
+              <li
+                class="card__item"
+                data-name="Taras Shevchenko"
+                data-position="Poet"
+                data-aos="fade-up"
+                data-aos-duration="1100"
+              >
+                <img
+                  src="./images/partners/sunstone.png"
+                  alt="sunstone"
+                  class="card__img"
+                />
+              </li>
+
+              <li
+                class="card__item"
+                data-name="Andriy Derezemlya"
+                data-position="Biatlonist"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              >
+                <img
+                  src="./images/partners/athena.png"
+                  alt="athena"
+                  class="card__img"
+                />
+              </li>
+
+              <li
+                class="card__item"
+                data-name="Mikhailo Mudryk"
+                data-position="Footbal player"
+                data-aos="fade-up"
+                data-aos-duration="1300"
+              >
+                <img
+                  src="./images/partners/chord.png"
+                  alt="chord"
+                  class="card__img"
+                />
+              </li>
+
+              <li
+                class="card__item"
+                data-name="Kim Chen In"
+                data-position="Diktator"
+                data-aos="fade-up"
+                data-aos-duration="1400"
+              >
+                <img
+                  src="./images/partners/freshly.png"
+                  alt="freshly"
+                  class="card__img"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section__team team"
+        id="team"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
+        <img
+          src="./images/team/cross.svg"
+          alt="cross"
+          class="team__cross team__cross--first"
+        />
+
+        <img
+          src="./images/team/cross.svg"
+          alt="cross"
+          class="team__cross team__cross--last"
+        />
+
+        <div class="container">
+          <div class="team__wrapper">
+            <div
+              class="section__title team__title"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              Our teams
+            </div>
+
+            <ul class="team__list" data-aos="fade-up" data-aos-duration="900">
+              <li class="team__item team__item--active" data-team="1">
+                <svg
+                  class="team__img team__img--active"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_136)">
+                    <path
+                      d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.8043 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.8043 6.05357 7.92893 7.92893C6.05357 9.8043 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.8043 23.9464 12.3478 25 15 25ZM15 21.25C13.3424 21.25 11.7527 20.5915 10.5806 19.4194C9.40848 18.2473 8.75 16.6576 8.75 15C8.75 13.3424 9.40848 11.7527 10.5806 10.5806C11.7527 9.40848 13.3424 8.75 15 8.75C16.6576 8.75 18.2473 9.40848 19.4194 10.5806C20.5915 11.7527 21.25 13.3424 21.25 15C21.25 16.6576 20.5915 18.2473 19.4194 19.4194C18.2473 20.5915 16.6576 21.25 15 21.25Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_136">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span class="team__item-span">Team 1</span>
+              </li>
+
+              <li class="team__item" data-team="2">
+                <svg
+                  class="team__img"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_128)">
+                    <path
+                      d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09624 8.09625 2.49999 15 2.49999C21.9038 2.49999 27.5 8.09624 27.5 15C27.5 21.9037 21.9038 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92892C20.1957 6.05356 17.6522 4.99999 15 4.99999C12.3478 4.99999 9.8043 6.05356 7.92893 7.92892C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.8043 23.9464 12.3478 25 15 25Z"
+                      fill="#09121F"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_128">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span class="team__item-span">Team 2</span>
+              </li>
+
+              <li class="team__item" data-team="3">
+                <svg
+                  class="team__img"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_128)">
+                    <path
+                      d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09624 8.09625 2.49999 15 2.49999C21.9038 2.49999 27.5 8.09624 27.5 15C27.5 21.9037 21.9038 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92892C20.1957 6.05356 17.6522 4.99999 15 4.99999C12.3478 4.99999 9.8043 6.05356 7.92893 7.92892C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.8043 23.9464 12.3478 25 15 25Z"
+                      fill="#09121F"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_128">
+                      <rect width="30" height="30" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span class="team__item-span">Team 3</span>
+              </li>
+            </ul>
+
+            <article
+              class="team__article"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <h2 class="team__subtitle">About</h2>
+
+              <p class="team__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec
+                non egestas nisl. Fusce nullam ac sed eget. Dui in eget a
+                tristique.
+              </p>
+            </article>
+
+            <div class="team__swp">
+              <ul class="team__swiper team__swiper--active" data-team="1">
+                <li class="team__slide" data-team="1">
+                  <img
+                    src="./images/team/people/first.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Vitaliy Buyalskiy</h3>
+                    <p class="team__overlay-position">Front End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="2">
+                  <img
+                    src="./images/team/people/two.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Anatoliy Ostapenko</h3>
+                    <p class="team__overlay-position">Back End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="3">
+                  <img
+                    src="./images/team/people/first.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Tom Dou</h3>
+                    <p class="team__overlay-position">Front End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="4">
+                  <img
+                    src="./images/team/people/two.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Karlos Dou</h3>
+                    <p class="team__overlay-position">HR Manager</p>
+                    <a href="#" class="team__overlay-read button button__start"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="team__swiper" data-team="2">
+                <li class="team__slide" data-team="4">
+                  <img
+                    src="./images/team/people/two.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Karlos Dou</h3>
+                    <p class="team__overlay-position">HR Manager</p>
+                    <a href="#" class="team__overlay-read button button__start"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="1">
+                  <img
+                    src="./images/team/people/first.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Vitaliy Buyalskiy</h3>
+                    <p class="team__overlay-position">Front End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="3">
+                  <img
+                    src="./images/team/people/first.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Tom Dou</h3>
+                    <p class="team__overlay-position">Front End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="2">
+                  <img
+                    src="./images/team/people/two.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Anatoliy Ostapenko</h3>
+                    <p class="team__overlay-position">Back End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="team__swiper" data-team="3">
+                <li class="team__slide" data-team="1">
+                  <img
+                    src="./images/team/people/first.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Vitaliy Buyalskiy</h3>
+                    <p class="team__overlay-position">Front End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="2">
+                  <img
+                    src="./images/team/people/two.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Anatoliy Ostapenko</h3>
+                    <p class="team__overlay-position">Back End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="3">
+                  <img
+                    src="./images/team/people/first.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Tom Dou</h3>
+                    <p class="team__overlay-position">Front End</p>
+                    <a href="#" class="team__overlay-read button">Read More</a>
+                  </div>
+                </li>
+
+                <li class="team__slide" data-team="4">
+                  <img
+                    src="./images/team/people/two.png"
+                    alt="People"
+                    class="team__photo"
+                  />
+
+                  <div class="team__overlay">
+                    <h3 class="team__overlay-name">Karlos Dou</h3>
+                    <p class="team__overlay-position">HR Manager</p>
+                    <a href="#" class="team__overlay-read button button__start"
+                      >Read More</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="team__block"
+              data-aos="fade-up"
+              data-aos-duration="1300"
+            >
+              <ul class="team__line">
+                <li class="team__line-item team__line-item--active"></li>
+                <li class="team__line-item"></li>
+                <li class="team__line-item"></li>
+                <li class="team__line-item"></li>
+              </ul>
+
+              <div class="team__section">
+                <button
+                  class="team__button team__button--prev team__button--disable"
+                  data-direction="prev"
+                >
+                  <svg
+                    class="team__button-img team__button-img--prev"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.48035 11.9167L14.2914 6.10569L12.7595 4.57385L4.33335 13L12.7595 21.4262L14.2914 19.8944L8.48035 14.0834H21.6667V11.9167H8.48035Z"
+                      fill="#101020"
+                      fill-opacity="0.5"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  class="team__button team__button--next team__button--active"
+                  data-direction="next"
+                >
+                  <svg
+                    class="team__button-img team__button-img--next"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5196 11.9167L11.7086 6.10569L13.2405 4.57385L21.6666 13L13.2405 21.4262L11.7086 19.8944L17.5196 14.0834H4.33331V11.9167H17.5196Z"
+                      fill="#101020"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section__contact contact"
+        id="contact"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
+        <div class="container">
+          <div class="contact__wrapper">
+            <div
+              class="section__title contact__title"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              Contact Us
+            </div>
+
+            <form
+              action="/"
+              class="contact__form"
+              method="post"
+              id="form"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              <input
+                type="text"
+                class="contact__input contact__input-name"
+                placeholder="Your Name"
+                required
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              />
+
+              <input
+                type="email"
+                class="contact__input contact__input-email"
+                placeholder="Email Address"
+                required
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              />
+
+              <input
+                type="number"
+                class="contact__input contact__input-phone"
+                placeholder="Phone Number"
+                required
+                data-aos="fade-up"
+                data-aos-duration="1400"
+              />
+
+              <select
+                name=""
+                id=""
+                class="contact__input contact__input-select"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+              >
+                <option value="" class="contact__option">
+                  Choose your job type
+                </option>
+
+                <option value="" class="contact__option">
+                  Choose your job type
+                </option>
+
+                <option value="" class="contact__option">
+                  Choose your job type
+                </option>
+              </select>
+
+              <textarea
+                name=""
+                id=""
+                class="contact__textarea contact__input"
+                placeholder="Message"
+                data-aos="fade-up"
+                data-aos-duration="1700"
+              ></textarea>
+
+              <label
+                for="file"
+                class="contact__label"
+                data-aos="fade-up"
+                data-aos-duration="1900"
+              >
+                <img
+                  src="./images/contact/upload.svg"
+                  alt="Upload"
+                  class="contact__label-img"
+                />
+
+                <span class="contact__label-span">Upload your CV</span>
+
+                <input
+                  type="file"
+                  class="contact__file"
+                  placeholder="Upload your CV"
+                  id="file"
+                  hidden
+                />
+              </label>
+
+              <button
+                class="button button__submit"
+                id="submitButton"
+                data-aos="fade-up"
+                data-aos-duration="1900"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <picture
+          class="contact__bottom"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
+          <img
+            src="./images/contact/frame-bottom.svg"
+            alt="frame"
+            class="contact__bottom-frame"
+          />
+        </picture>
+
+        <picture
+          class="contact__picture"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+        >
+          <source
+            media="(max-width: 767px)"
+            srcset="./images/contact/bg/background-mobile.png"
+          />
+
+          <img
+            src="./images/contact/bg/background.png"
+            alt="background"
+            class="contact__picture-img"
+          />
+        </picture>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section
+        class="section section__footer"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
+        <img
+          src="./images/footer/frame.svg"
+          alt="frame"
+          class="footer__right"
+          class="footer__list"
+          data-aos="fade-right"
+          data-aos-duration="1300"
+        />
+
+        <div class="container">
+          <div class="footer__wrapper">
+            <h1
+              class="section__title footer__title"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              Where You Can Find Us?
+            </h1>
+
+            <div
+              class="footer__block footer__block-top"
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
+              <h4 class="footer__subtitle">Office 1</h4>
+
+              <ul
+                class="footer__list"
+                data-aos="fade-right"
+                data-aos-duration="1300"
+              >
+                <li class="footer__item">
+                  <a
+                    href="https://maps.app.goo.gl/75k3ejdzF7cKiv8s9"
+                    class="footer__link"
+                    target="_blank"
+                  >
+                    <svg
+                      class="footer__img footer__img-small"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_153)">
+                        <path
+                          d="M12 23.728L5.636 17.364C4.37734 16.1054 3.52019 14.5017 3.17293 12.7559C2.82567 11.0101 3.00391 9.20047 3.6851 7.55595C4.36629 5.91142 5.51984 4.50582 6.99988 3.51689C8.47992 2.52796 10.22 2.00012 12 2.00012C13.78 2.00012 15.5201 2.52796 17.0001 3.51689C18.4802 4.50582 19.6337 5.91142 20.3149 7.55595C20.9961 9.20047 21.1743 11.0101 20.8271 12.7559C20.4798 14.5017 19.6227 16.1054 18.364 17.364L12 23.728ZM16.95 15.95C17.9289 14.971 18.5955 13.7238 18.8656 12.3659C19.1356 11.0081 18.9969 9.60064 18.4671 8.3216C17.9373 7.04256 17.04 5.94935 15.8889 5.18021C14.7378 4.41107 13.3844 4.00055 12 4.00055C10.6156 4.00055 9.26222 4.41107 8.11109 5.18021C6.95996 5.94935 6.06275 7.04256 5.53292 8.3216C5.00308 9.60064 4.86442 11.0081 5.13445 12.3659C5.40449 13.7238 6.07111 14.971 7.05 15.95L12 20.9L16.95 15.95ZM12 13C11.4696 13 10.9609 12.7893 10.5858 12.4143C10.2107 12.0392 10 11.5305 10 11C10 10.4696 10.2107 9.9609 10.5858 9.58583C10.9609 9.21076 11.4696 9.00004 12 9.00004C12.5304 9.00004 13.0391 9.21076 13.4142 9.58583C13.7893 9.9609 14 10.4696 14 11C14 11.5305 13.7893 12.0392 13.4142 12.4143C13.0391 12.7893 12.5304 13 12 13Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_153">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="footer__span"
+                      >Lasnamae linnaosa, Pae tn 25-47</span
+                    >
+                  </a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="mailto:username@mail.com" class="footer__link">
+                    <svg
+                      class="footer__img footer__img-small"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_150)">
+                        <path
+                          d="M3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM20 7.238L12.072 14.338L4 7.216V19H20V7.238ZM4.511 5L12.061 11.662L19.502 5H4.511Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_150">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="footer__span">username@mail.com</span>
+                  </a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="tel:+3125789075" class="footer__link">
+                    <svg
+                      class="footer__img footer__img-small"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_147)">
+                        <path
+                          d="M9.366 10.682C10.3043 12.3305 11.6695 13.6957 13.318 14.634L14.202 13.396C14.3442 13.1969 14.5543 13.0569 14.7928 13.0023C15.0313 12.9478 15.2814 12.9825 15.496 13.1C16.9103 13.8729 18.4722 14.3378 20.079 14.464C20.3298 14.4839 20.5638 14.5975 20.7345 14.7823C20.9052 14.9671 21 15.2094 21 15.461V19.923C21.0001 20.1706 20.9083 20.4094 20.7424 20.5932C20.5765 20.777 20.3483 20.8927 20.102 20.918C19.572 20.973 19.038 21 18.5 21C9.94 21 3 14.06 3 5.5C3 4.962 3.027 4.428 3.082 3.898C3.10725 3.6517 3.22298 3.42352 3.40679 3.25763C3.5906 3.09175 3.82941 2.99995 4.077 3H8.539C8.79056 2.99997 9.0329 3.09475 9.21768 3.26545C9.40247 3.43615 9.51613 3.67022 9.536 3.921C9.66222 5.52779 10.1271 7.08968 10.9 8.504C11.0175 8.71856 11.0522 8.96874 10.9977 9.2072C10.9431 9.44565 10.8031 9.65584 10.604 9.798L9.366 10.682ZM6.844 10.025L8.744 8.668C8.20478 7.50409 7.83535 6.26884 7.647 5H5.01C5.004 5.166 5.001 5.333 5.001 5.5C5 12.956 11.044 19 18.5 19C18.667 19 18.834 18.997 19 18.99V16.353C17.7312 16.1646 16.4959 15.7952 15.332 15.256L13.975 17.156C13.4287 16.9437 12.898 16.6931 12.387 16.406L12.329 16.373C10.3676 15.2567 8.74328 13.6324 7.627 11.671L7.594 11.613C7.30691 11.102 7.05628 10.5713 6.844 10.025Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_147">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="footer__span">+3125789075</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="footer__block footer__block-middle"
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
+              <h4 class="footer__subtitle">Office 2</h4>
+
+              <ul
+                class="footer__list"
+                class="footer__list"
+                data-aos="fade-right"
+                data-aos-duration="1300"
+              >
+                <li class="footer__item">
+                  <a
+                    href="https://maps.app.goo.gl/75k3ejdzF7cKiv8s9"
+                    class="footer__link"
+                    target="_blank"
+                  >
+                    <svg
+                      class="footer__img footer__img-small"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_165)">
+                        <path
+                          d="M12 23.728L5.636 17.364C4.37734 16.1054 3.52019 14.5017 3.17293 12.7559C2.82567 11.0101 3.00391 9.20047 3.6851 7.55595C4.36629 5.91142 5.51984 4.50582 6.99988 3.51689C8.47992 2.52796 10.22 2.00012 12 2.00012C13.78 2.00012 15.5201 2.52796 17.0001 3.51689C18.4802 4.50582 19.6337 5.91142 20.3149 7.55595C20.9961 9.20047 21.1743 11.0101 20.8271 12.7559C20.4798 14.5017 19.6227 16.1054 18.364 17.364L12 23.728ZM16.95 15.95C17.9289 14.971 18.5955 13.7238 18.8656 12.3659C19.1356 11.0081 18.9969 9.60064 18.4671 8.3216C17.9373 7.04256 17.04 5.94935 15.8889 5.18021C14.7378 4.41107 13.3844 4.00055 12 4.00055C10.6156 4.00055 9.26222 4.41107 8.11109 5.18021C6.95996 5.94935 6.06275 7.04256 5.53292 8.3216C5.00308 9.60064 4.86442 11.0081 5.13445 12.3659C5.40449 13.7238 6.07111 14.971 7.05 15.95L12 20.9L16.95 15.95ZM12 13C11.4696 13 10.9609 12.7893 10.5858 12.4143C10.2107 12.0392 10 11.5305 10 11C10 10.4696 10.2107 9.9609 10.5858 9.58583C10.9609 9.21076 11.4696 9.00004 12 9.00004C12.5304 9.00004 13.0391 9.21076 13.4142 9.58583C13.7893 9.9609 14 10.4696 14 11C14 11.5305 13.7893 12.0392 13.4142 12.4143C13.0391 12.7893 12.5304 13 12 13Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_165">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="footer__span"
+                      >Lasnamae linnaosa, Pae tn 25-47</span
+                    >
+                  </a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="mailto:username@mail.com" class="footer__link">
+                    <svg
+                      class="footer__img footer__img-small"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_162)">
+                        <path
+                          d="M3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM20 7.238L12.072 14.338L4 7.216V19H20V7.238ZM4.511 5L12.061 11.662L19.502 5H4.511Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_162">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="footer__span">username@mail.com</span>
+                  </a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="tel:+3125789075" class="footer__link">
+                    <svg
+                      class="footer__img footer__img-small"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_159)">
+                        <path
+                          d="M9.366 10.682C10.3043 12.3305 11.6695 13.6957 13.318 14.634L14.202 13.396C14.3442 13.1969 14.5543 13.0569 14.7928 13.0023C15.0313 12.9478 15.2814 12.9825 15.496 13.1C16.9103 13.8729 18.4722 14.3378 20.079 14.464C20.3298 14.4839 20.5638 14.5975 20.7345 14.7823C20.9052 14.9671 21 15.2094 21 15.461V19.923C21.0001 20.1706 20.9083 20.4094 20.7424 20.5932C20.5765 20.777 20.3483 20.8927 20.102 20.918C19.572 20.973 19.038 21 18.5 21C9.94 21 3 14.06 3 5.5C3 4.962 3.027 4.428 3.082 3.898C3.10725 3.6517 3.22298 3.42352 3.40679 3.25763C3.5906 3.09175 3.82941 2.99995 4.077 3H8.539C8.79056 2.99997 9.0329 3.09475 9.21768 3.26545C9.40247 3.43615 9.51613 3.67022 9.536 3.921C9.66222 5.52779 10.1271 7.08968 10.9 8.504C11.0175 8.71856 11.0522 8.96874 10.9977 9.2072C10.9431 9.44565 10.8031 9.65584 10.604 9.798L9.366 10.682ZM6.844 10.025L8.744 8.668C8.20478 7.50409 7.83535 6.26884 7.647 5H5.01C5.004 5.166 5.001 5.333 5.001 5.5C5 12.956 11.044 19 18.5 19C18.667 19 18.834 18.997 19 18.99V16.353C17.7312 16.1646 16.4959 15.7952 15.332 15.256L13.975 17.156C13.4287 16.9437 12.898 16.6931 12.387 16.406L12.329 16.373C10.3676 15.2567 8.74328 13.6324 7.627 11.671L7.594 11.613C7.30691 11.102 7.05628 10.5713 6.844 10.025Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_159">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                    <span class="footer__span">+3125789075</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="footer__block footer__block-footer social"
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
+              <h4 class="footer__subtitle">Social</h4>
+
+              <ul
+                class="footer__list footer__list-social social__list"
+                class="footer__list"
+                data-aos="fade-right"
+                data-aos-duration="1300"
+              >
+                <li class="footer__item social__item">
+                  <a
+                    href="https://www.facebook.com/"
+                    class="footer__link social__link"
+                    target="_blank"
+                  >
+                    <svg
+                      class="footer__img footer__img-social social__img"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_171)">
+                        <path
+                          d="M19.8333 26.9167H26.9167V7.08333H7.08333V26.9167H17V19.8333H14.1667V17H17V14.6568C17 12.7627 17.1983 12.0757 17.5667 11.3829C17.9295 10.6975 18.4903 10.1372 19.176 9.775C19.7172 9.48458 20.3901 9.31033 21.5659 9.23525C22.032 9.2055 22.6355 9.24233 23.3764 9.34858V12.0402H22.6667C21.3676 12.0402 20.8307 12.1012 20.5105 12.2726C20.3195 12.3708 20.1639 12.5264 20.0657 12.7174C19.8957 13.0376 19.8333 13.3549 19.8333 14.6554V17H23.375L22.6667 19.8333H19.8333V26.9167ZM5.66667 4.25H28.3333C28.7091 4.25 29.0694 4.39926 29.3351 4.66493C29.6007 4.93061 29.75 5.29094 29.75 5.66667V28.3333C29.75 28.7091 29.6007 29.0694 29.3351 29.3351C29.0694 29.6007 28.7091 29.75 28.3333 29.75H5.66667C5.29094 29.75 4.93061 29.6007 4.66493 29.3351C4.39926 29.0694 4.25 28.7091 4.25 28.3333V5.66667C4.25 5.29094 4.39926 4.93061 4.66493 4.66493C4.93061 4.39926 5.29094 4.25 5.66667 4.25Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_171">
+                          <rect width="34" height="34" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="footer__item social__item">
+                  <a
+                    href="https://x.com/?lang=ru"
+                    class="footer__link social__link"
+                    target="_blank"
+                  >
+                    <svg
+                      class="footer__img footer__img-social social__img"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_172)">
+                        <path
+                          d="M21.675 7.8625C20.5983 7.86232 19.5645 8.28484 18.7962 9.03914C18.0279 9.79343 17.5864 10.8192 17.5667 11.8957L17.527 14.127C17.5247 14.2468 17.4971 14.3648 17.4459 14.4731C17.3948 14.5815 17.3214 14.6778 17.2304 14.7558C17.1395 14.8338 17.033 14.8917 16.9181 14.9257C16.8032 14.9596 16.6824 14.9689 16.5637 14.9529L14.3523 14.6526C11.4424 14.2559 8.65442 12.9157 5.97976 10.6873C5.13259 15.3765 6.78726 18.6249 10.7723 21.131L13.2473 22.6865C13.3649 22.7604 13.4625 22.862 13.5318 22.9824C13.601 23.1028 13.6397 23.2383 13.6445 23.3771C13.6492 23.5159 13.6199 23.6538 13.5591 23.7786C13.4982 23.9034 13.4077 24.0115 13.2954 24.0932L11.0401 25.7408C12.3817 25.8244 13.6553 25.7649 14.7121 25.5552C21.3959 24.2207 25.84 19.1916 25.84 10.8956C25.84 10.2184 24.4063 7.8625 21.675 7.8625ZM14.7333 11.8433C14.7581 10.4777 15.1851 9.14978 15.961 8.02573C16.7368 6.90168 17.8271 6.03149 19.0951 5.5241C20.3632 5.01672 21.7528 4.8947 23.0899 5.17331C24.427 5.45192 25.6522 6.11879 26.6121 7.09042C27.6193 7.08333 28.4764 7.33833 30.3932 6.17667C29.9186 8.5 29.6848 9.50867 28.6733 10.8956C28.6733 21.7217 22.0193 26.9861 15.2674 28.3333C10.6378 29.257 3.90576 27.7397 1.97626 25.7253C2.95942 25.6487 6.95442 25.2195 9.26359 23.5294C7.31001 22.2417 -0.466076 17.6658 4.64384 5.3635C7.04226 8.16425 9.47468 10.0711 11.9397 11.0826C13.5802 11.7555 13.9825 11.7413 14.7348 11.8447L14.7333 11.8433Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_172">
+                          <rect width="34" height="34" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="footer__item social__item">
+                  <a
+                    href="https://www.linkedin.com/"
+                    class="footer__link social__link"
+                    target="_blank"
+                  >
+                    <svg
+                      class="footer__img footer__img-social social__img"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_174)">
+                        <path
+                          d="M5.66667 4.25H28.3333C28.7091 4.25 29.0694 4.39926 29.3351 4.66493C29.6007 4.93061 29.75 5.29094 29.75 5.66667V28.3333C29.75 28.7091 29.6007 29.0694 29.3351 29.3351C29.0694 29.6007 28.7091 29.75 28.3333 29.75H5.66667C5.29094 29.75 4.93061 29.6007 4.66493 29.3351C4.39926 29.0694 4.25 28.7091 4.25 28.3333V5.66667C4.25 5.29094 4.39926 4.93061 4.66493 4.66493C4.93061 4.39926 5.29094 4.25 5.66667 4.25ZM7.08333 7.08333V26.9167H26.9167V7.08333H7.08333ZM10.625 12.75C10.0614 12.75 9.52091 12.5261 9.1224 12.1276C8.72388 11.7291 8.5 11.1886 8.5 10.625C8.5 10.0614 8.72388 9.52091 9.1224 9.1224C9.52091 8.72388 10.0614 8.5 10.625 8.5C11.1886 8.5 11.7291 8.72388 12.1276 9.1224C12.5261 9.52091 12.75 10.0614 12.75 10.625C12.75 11.1886 12.5261 11.7291 12.1276 12.1276C11.7291 12.5261 11.1886 12.75 10.625 12.75ZM9.20833 14.1667H12.0417V24.7917H9.20833V14.1667ZM17 14.7758C17.8273 13.9754 18.7935 13.4583 19.8333 13.4583C22.7673 13.4583 24.7917 15.8369 24.7917 18.7708V24.7917H21.9583V18.7708C21.9583 18.1133 21.6971 17.4827 21.2322 17.0178C20.7673 16.5529 20.1367 16.2917 19.4792 16.2917C18.8217 16.2917 18.1911 16.5529 17.7261 17.0178C17.2612 17.4827 17 18.1133 17 18.7708V24.7917H14.1667V14.1667H17V14.7758Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_174">
+                          <rect width="34" height="34" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="footer__item social__item">
+                  <a
+                    href="https://www.instagram.com/"
+                    class="footer__link social__link"
+                    target="_blank"
+                  >
+                    <svg
+                      class="footer__img footer__img-social social__img"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_173)">
+                        <path
+                          d="M17 12.75C15.8728 12.75 14.7918 13.1978 13.9948 13.9948C13.1977 14.7919 12.75 15.8729 12.75 17C12.75 18.1272 13.1977 19.2082 13.9948 20.0052C14.7918 20.8023 15.8728 21.25 17 21.25C18.1272 21.25 19.2082 20.8023 20.0052 20.0052C20.8022 19.2082 21.25 18.1272 21.25 17C21.25 15.8729 20.8022 14.7919 20.0052 13.9948C19.2082 13.1978 18.1272 12.75 17 12.75ZM17 9.91671C18.8786 9.91671 20.6803 10.663 22.0087 11.9914C23.337 13.3198 24.0833 15.1214 24.0833 17C24.0833 18.8787 23.337 20.6803 22.0087 22.0087C20.6803 23.3371 18.8786 24.0834 17 24.0834C15.1214 24.0834 13.3197 23.3371 11.9913 22.0087C10.6629 20.6803 9.91665 18.8787 9.91665 17C9.91665 15.1214 10.6629 13.3198 11.9913 11.9914C13.3197 10.663 15.1214 9.91671 17 9.91671ZM26.2083 9.56254C26.2083 10.0322 26.0217 10.4826 25.6897 10.8147C25.3576 11.1468 24.9071 11.3334 24.4375 11.3334C23.9678 11.3334 23.5174 11.1468 23.1853 10.8147C22.8532 10.4826 22.6666 10.0322 22.6666 9.56254C22.6666 9.09289 22.8532 8.64247 23.1853 8.31037C23.5174 7.97828 23.9678 7.79171 24.4375 7.79171C24.9071 7.79171 25.3576 7.97828 25.6897 8.31037C26.0217 8.64247 26.2083 9.09289 26.2083 9.56254ZM17 5.66671C13.4951 5.66671 12.9228 5.67662 11.2922 5.74887C10.1816 5.80129 9.4364 5.95004 8.74506 6.21921C8.13023 6.45721 7.68681 6.74196 7.21506 7.21512C6.77166 7.64352 6.43073 8.16653 6.21773 8.74512C5.94856 9.43929 5.79981 10.183 5.74881 11.2923C5.67515 12.8563 5.66665 13.4031 5.66665 17C5.66665 20.5049 5.67656 21.0772 5.74881 22.7078C5.80123 23.817 5.94998 24.5636 6.21773 25.2535C6.45856 25.8698 6.7419 26.3132 7.21223 26.7835C7.68965 27.2595 8.13306 27.5443 8.74223 27.7795C9.44206 28.05 10.1872 28.2002 11.2922 28.2512C12.8562 28.3249 13.4031 28.3334 17 28.3334C20.5048 28.3334 21.0771 28.3235 22.7077 28.2512C23.8156 28.1988 24.5621 28.05 25.2535 27.7823C25.8669 27.5429 26.3131 27.2581 26.7835 26.7878C27.2609 26.3104 27.5456 25.867 27.7808 25.2578C28.05 24.5594 28.2001 23.8128 28.2511 22.7078C28.3248 21.1438 28.3333 20.597 28.3333 17C28.3333 13.4952 28.3234 12.9229 28.2511 11.2923C28.1987 10.1845 28.05 9.43646 27.7808 8.74512C27.5673 8.16713 27.227 7.64432 26.7849 7.21512C26.3567 6.77149 25.8336 6.43053 25.2549 6.21779C24.5607 5.94862 23.8156 5.79987 22.7077 5.74887C21.1437 5.67521 20.5969 5.66671 17 5.66671ZM17 2.83337C20.8491 2.83337 21.3293 2.84754 22.8395 2.91837C24.3482 2.98921 25.3753 3.22579 26.2791 3.57712C27.2141 3.93696 28.0018 4.42429 28.7895 5.21054C29.5098 5.91873 30.0672 6.77538 30.4229 7.72087C30.7728 8.62329 31.0108 9.65179 31.0816 11.1605C31.1482 12.6707 31.1666 13.151 31.1666 17C31.1666 20.8491 31.1525 21.3294 31.0816 22.8395C31.0108 24.3483 30.7728 25.3754 30.4229 26.2792C30.0683 27.2252 29.5107 28.0821 28.7895 28.7895C28.0811 29.5097 27.2245 30.067 26.2791 30.423C25.3767 30.7729 24.3482 31.0109 22.8395 31.0817C21.3293 31.1483 20.8491 31.1667 17 31.1667C13.1509 31.1667 12.6706 31.1525 11.1605 31.0817C9.65173 31.0109 8.62465 30.7729 7.72081 30.423C6.77494 30.068 5.91814 29.5105 5.21048 28.7895C4.48997 28.0815 3.93255 27.2248 3.57706 26.2792C3.22573 25.3768 2.98915 24.3483 2.91831 22.8395C2.85173 21.3294 2.83331 20.8491 2.83331 17C2.83331 13.151 2.84748 12.6707 2.91831 11.1605C2.98915 9.65037 3.22573 8.62471 3.57706 7.72087C3.93156 6.77479 4.48912 5.91791 5.21048 5.21054C5.91835 4.48978 6.77509 3.93232 7.72081 3.57712C8.62465 3.22579 9.65031 2.98921 11.1605 2.91837C12.6706 2.85179 13.1509 2.83337 17 2.83337Z"
+                          fill="#FF0B53"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_173">
+                          <rect width="34" height="34" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+
+              <div
+                class="footer__policy social__policy"
+                class="footer__list"
+                data-aos="fade-right"
+                data-aos-duration="1300"
+              >
+                Privacy Policy
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init();
+      });
+    </script>
   </body>
 </html>
