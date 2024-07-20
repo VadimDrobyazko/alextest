@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.scss" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"
-      defer
-    ></script>
-    <script src="scripts/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <script src="scripts/main.js" type="module"></script>
     <title>Testing</title>
   </head>
   <body class="body">
@@ -193,10 +193,12 @@
       </picture>
     </nav>
 
-    <header class="header">
+    <header class="header" id="#home">
       <div class="container header__wrapper">
         <div class="header__top">
-          <img src="./images/logo/Logo.svg" alt="Logo" class="header__logo" />
+          <a href="#home">
+            <img src="./images/logo/Logo.svg" alt="Logo" class="header__logo" />
+          </a>
 
           <nav class="nav">
             <ul class="nav__list">
@@ -247,32 +249,20 @@
         <div class="header__middle">
           <div class="header__middle-block">
             <div class="header__middle-wrapper">
-              <h1
-                class="header__title"
-                data-aos="fade-up"
-                data-aos-duration="700"
-              >
+              <h1 class="header__title">
                 Email marceting for fast-growing startups
               </h1>
 
-              <h3
-                class="header__subtitle"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
+              <h3 class="header__subtitle">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ut
                 cursus dictum purus enim in in urna, suspendisse. Mauris, mollis
                 sed sed ac.
               </h3>
 
-              <div
-                class="header__block"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
+              <div class="header__block">
                 <button class="button button__start">Start Now</button>
 
-                <button class="button button__read">Read More</button>
+                <button class="button button__header">Read More</button>
               </div>
             </div>
 
@@ -305,12 +295,7 @@
     </header>
 
     <main class="main">
-      <section
-        class="section section__partners partners"
-        id="partners"
-        data-aos="fade-up"
-        data-aos-duration="600"
-      >
+      <section class="section section__partners partners" id="partners">
         <div class="container">
           <div
             class="section__title partners__title"
@@ -454,12 +439,7 @@
         </div>
       </section>
 
-      <section
-        class="section section__team team"
-        id="team"
-        data-aos="fade-up"
-        data-aos-duration="600"
-      >
+      <section class="section section__team team" id="team">
         <img
           src="./images/team/cross.svg"
           alt="cross"
@@ -484,78 +464,15 @@
             </div>
 
             <ul class="team__list" data-aos="fade-up" data-aos-duration="900">
-              <li class="team__item team__item--active" data-team="1">
-                <svg
-                  class="team__img team__img--active"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1_136)">
-                    <path
-                      d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09625 8.09625 2.5 15 2.5C21.9037 2.5 27.5 8.09625 27.5 15C27.5 21.9037 21.9037 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.8043 22.0711 7.92893C20.1957 6.05357 17.6522 5 15 5C12.3478 5 9.8043 6.05357 7.92893 7.92893C6.05357 9.8043 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.8043 23.9464 12.3478 25 15 25ZM15 21.25C13.3424 21.25 11.7527 20.5915 10.5806 19.4194C9.40848 18.2473 8.75 16.6576 8.75 15C8.75 13.3424 9.40848 11.7527 10.5806 10.5806C11.7527 9.40848 13.3424 8.75 15 8.75C16.6576 8.75 18.2473 9.40848 19.4194 10.5806C20.5915 11.7527 21.25 13.3424 21.25 15C21.25 16.6576 20.5915 18.2473 19.4194 19.4194C18.2473 20.5915 16.6576 21.25 15 21.25Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_136">
-                      <rect width="30" height="30" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-
+              <li class="team__item active" data-target="#team-1">
                 <span class="team__item-span">Team 1</span>
               </li>
 
-              <li class="team__item" data-team="2">
-                <svg
-                  class="team__img"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1_128)">
-                    <path
-                      d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09624 8.09625 2.49999 15 2.49999C21.9038 2.49999 27.5 8.09624 27.5 15C27.5 21.9037 21.9038 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92892C20.1957 6.05356 17.6522 4.99999 15 4.99999C12.3478 4.99999 9.8043 6.05356 7.92893 7.92892C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.8043 23.9464 12.3478 25 15 25Z"
-                      fill="#09121F"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_128">
-                      <rect width="30" height="30" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-
+              <li class="team__item" data-target="#team-2">
                 <span class="team__item-span">Team 2</span>
               </li>
 
-              <li class="team__item" data-team="3">
-                <svg
-                  class="team__img"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1_128)">
-                    <path
-                      d="M15 27.5C8.09625 27.5 2.5 21.9037 2.5 15C2.5 8.09624 8.09625 2.49999 15 2.49999C21.9038 2.49999 27.5 8.09624 27.5 15C27.5 21.9037 21.9038 27.5 15 27.5ZM15 25C17.6522 25 20.1957 23.9464 22.0711 22.0711C23.9464 20.1957 25 17.6522 25 15C25 12.3478 23.9464 9.80429 22.0711 7.92892C20.1957 6.05356 17.6522 4.99999 15 4.99999C12.3478 4.99999 9.8043 6.05356 7.92893 7.92892C6.05357 9.80429 5 12.3478 5 15C5 17.6522 6.05357 20.1957 7.92893 22.0711C9.8043 23.9464 12.3478 25 15 25Z"
-                      fill="#09121F"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_128">
-                      <rect width="30" height="30" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-
+              <li class="team__item" data-target="#team-3">
                 <span class="team__item-span">Team 3</span>
               </li>
             </ul>
@@ -575,251 +492,428 @@
               </p>
             </article>
 
-            <div class="team__swp">
-              <ul class="team__swiper team__swiper--active" data-team="1">
-                <li class="team__slide" data-team="1">
-                  <img
-                    src="./images/team/people/first.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Vitaliy Buyalskiy</h3>
-                    <p class="team__overlay-position">Front End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+            <div class="team__carousel">
+              <div class="swiper active" id="team-1">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    data-name="Anna Dou"
+                    data-position="Front End Developer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/four.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="2">
-                  <img
-                    src="./images/team/people/two.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Anatoliy Ostapenko</h3>
-                    <p class="team__overlay-position">Back End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+                  <div
+                    class="swiper-slide"
+                    data-name="Bob Smith"
+                    data-position="UX Designer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/two.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="3">
-                  <img
-                    src="./images/team/people/first.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Tom Dou</h3>
-                    <p class="team__overlay-position">Front End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+                  <div
+                    class="swiper-slide"
+                    data-name="Andrew Johnson"
+                    data-position="Backend Developer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/three.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="4">
-                  <img
-                    src="./images/team/people/two.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Karlos Dou</h3>
-                    <p class="team__overlay-position">HR Manager</p>
-                    <a href="#" class="team__overlay-read button button__start"
-                      >Read More</a
-                    >
+                  <div
+                    class="swiper-slide"
+                    data-name="Genadiy Davis"
+                    data-position="Project Manager"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/first.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
-              </ul>
 
-              <ul class="team__swiper" data-team="2">
-                <li class="team__slide" data-team="4">
-                  <img
-                    src="./images/team/people/two.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Karlos Dou</h3>
-                    <p class="team__overlay-position">HR Manager</p>
-                    <a href="#" class="team__overlay-read button button__start"
-                      >Read More</a
-                    >
+                  <div
+                    class="swiper-slide"
+                    data-name="Bruce Lee"
+                    data-position="QA Engineer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/two.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
+                </div>
+              </div>
 
-                <li class="team__slide" data-team="1">
-                  <img
-                    src="./images/team/people/first.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Vitaliy Buyalskiy</h3>
-                    <p class="team__overlay-position">Front End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+              <div class="swiper" id="team-2">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    data-name="Volodymur Brown"
+                    data-position="Marketing Specialist"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/first.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="3">
-                  <img
-                    src="./images/team/people/first.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Tom Dou</h3>
-                    <p class="team__overlay-position">Front End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+                  <div
+                    class="swiper-slide"
+                    data-name="Stepan Williams"
+                    data-position="Content Creator"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/two.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="2">
-                  <img
-                    src="./images/team/people/two.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Anatoliy Ostapenko</h3>
-                    <p class="team__overlay-position">Back End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+                  <div
+                    class="swiper-slide"
+                    data-name="Andrew Davis"
+                    data-position="Product Designer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/three.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
-              </ul>
 
-              <ul class="team__swiper" data-team="3">
-                <li class="team__slide" data-team="1">
-                  <img
-                    src="./images/team/people/first.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Vitaliy Buyalskiy</h3>
-                    <p class="team__overlay-position">Front End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+                  <div
+                    class="swiper-slide"
+                    data-name="Noah Wilson"
+                    data-position="DevOps Engineer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/first.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="2">
-                  <img
-                    src="./images/team/people/two.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Anatoliy Ostapenko</h3>
-                    <p class="team__overlay-position">Back End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+                  <div
+                    class="swiper-slide"
+                    data-name="Vadym Martinez"
+                    data-position="Business Analyst"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/two.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
+                </div>
+              </div>
 
-                <li class="team__slide" data-team="3">
-                  <img
-                    src="./images/team/people/first.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Tom Dou</h3>
-                    <p class="team__overlay-position">Front End</p>
-                    <a href="#" class="team__overlay-read button">Read More</a>
+              <div class="swiper" id="team-3">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    data-name="Salivan Johnson"
+                    data-position="Sales Manager"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/three.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
 
-                <li class="team__slide" data-team="4">
-                  <img
-                    src="./images/team/people/two.png"
-                    alt="People"
-                    class="team__photo"
-                  />
-
-                  <div class="team__overlay">
-                    <h3 class="team__overlay-name">Karlos Dou</h3>
-                    <p class="team__overlay-position">HR Manager</p>
-                    <a href="#" class="team__overlay-read button button__start"
-                      >Read More</a
-                    >
+                  <div
+                    class="swiper-slide"
+                    data-name="James Smith"
+                    data-position="Graphic Designer"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/two.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
-                </li>
-              </ul>
+
+                  <div
+                    class="swiper-slide"
+                    data-name="Arnold Brown"
+                    data-position="Customer Support"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/three.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide"
+                    data-name="William Taylor"
+                    data-position="HR Manager"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/first.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide"
+                    data-name="Martiashvili Anderson"
+                    data-position="Data Scientist"
+                  >
+                    <picture>
+                      <source
+                        srcset="./images/team/people/two.png"
+                        type="image/webp"
+                      />
+                      <img src="./images/team/people/first.png" alt="People" />
+                    </picture>
+                    <div class="swiper__overlay">
+                      <h3 class="swiper__overlay-name"></h3>
+                      <p class="swiper__overlay-position"></p>
+                      <a
+                        href="#"
+                        class="swiper__overlay-read button button__read"
+                        >Read More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div
-              class="team__block"
-              data-aos="fade-up"
-              data-aos-duration="1300"
-            >
-              <ul class="team__line">
-                <li class="team__line-item team__line-item--active"></li>
-                <li class="team__line-item"></li>
-                <li class="team__line-item"></li>
-                <li class="team__line-item"></li>
-              </ul>
+            <div class="swiper-section">
+              <div class="swiper-scroll"></div>
 
-              <div class="team__section">
-                <button
-                  class="team__button team__button--prev team__button--disable"
-                  data-direction="prev"
-                >
+              <div class="swiper-section-buttons">
+                <div class="swiper-section-button swiper-section-prev">
                   <svg
-                    class="team__button-img team__button-img--prev"
+                    class="swiper-section-button-svg"
                     width="26"
                     height="26"
                     viewBox="0 0 26 26"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M8.48035 11.9167L14.2914 6.10569L12.7595 4.57385L4.33335 13L12.7595 21.4262L14.2914 19.8944L8.48035 14.0834H21.6667V11.9167H8.48035Z"
-                      fill="#101020"
-                      fill-opacity="0.5"
-                    />
+                    <g clip-path="url(#clip0_1_109)">
+                      <path
+                        d="M8.48035 11.9167L14.2914 6.10569L12.7595 4.57385L4.33335 13L12.7595 21.4262L14.2914 19.8944L8.48035 14.0834H21.6667V11.9167H8.48035Z"
+                        fill="#101020"
+                        fill-opacity="1"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_109">
+                        <rect
+                          width="26"
+                          height="26"
+                          fill="white"
+                          transform="matrix(-1 0 0 1 26 0)"
+                        />
+                      </clipPath>
+                    </defs>
                   </svg>
-                </button>
+                </div>
 
-                <button
-                  class="team__button team__button--next team__button--active"
-                  data-direction="next"
-                >
+                <div class="swiper-section-button swiper-section-next">
                   <svg
-                    class="team__button-img team__button-img--next"
+                    class="swiper-section-button-svg"
                     width="26"
                     height="26"
                     viewBox="0 0 26 26"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M17.5196 11.9167L11.7086 6.10569L13.2405 4.57385L21.6666 13L13.2405 21.4262L11.7086 19.8944L17.5196 14.0834H4.33331V11.9167H17.5196Z"
-                      fill="#101020"
-                    />
+                    <g clip-path="url(#clip0_1_106)">
+                      <path
+                        d="M17.5196 11.9167L11.7086 6.10569L13.2405 4.57385L21.6666 13L13.2405 21.4262L11.7086 19.8944L17.5196 14.0834H4.33331V11.9167H17.5196Z"
+                        fill="#101020"
+                        fill-opacity="1"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_106">
+                        <rect width="26" height="26" fill="white" />
+                      </clipPath>
+                    </defs>
                   </svg>
-                </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="section section__contact contact"
-        id="contact"
-        data-aos="fade-up"
-        data-aos-duration="600"
-      >
+      <section class="section section__contact contact" id="contact">
         <div class="container">
           <div class="contact__wrapper">
             <div
@@ -901,11 +995,26 @@
                 data-aos="fade-up"
                 data-aos-duration="1900"
               >
-                <img
-                  src="./images/contact/upload.svg"
-                  alt="Upload"
+                <svg
                   class="contact__label-img"
-                />
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_335)">
+                    <path
+                      d="M4 19H20V12H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V12H4V19ZM14 9V15H10V9H5L12 2L19 9H14Z"
+                      fill="#101020"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_335">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
 
                 <span class="contact__label-span">Upload your CV</span>
 
@@ -1332,10 +1441,52 @@
         </div>
       </section>
     </footer>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"
+      defer
+    ></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         AOS.init();
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".swiper-slide").forEach((slide) => {
+          const name = slide.getAttribute("data-name");
+          const position = slide.getAttribute("data-position");
+
+          const nameElement = slide.querySelector(".swiper__overlay-name");
+          const positionElement = slide.querySelector(
+            ".swiper__overlay-position"
+          );
+
+          if (nameElement) nameElement.textContent = name;
+          if (positionElement) positionElement.textContent = position;
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".team__item");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((item) => item.classList.remove("active"));
+            document
+              .querySelectorAll(".swiper")
+              .forEach((swiper) => swiper.classList.remove("active"));
+
+            tab.classList.add("active");
+
+            const targetId = tab.getAttribute("data-target");
+
+            const targetSwiper = document.querySelector(targetId);
+
+            if (targetSwiper) {
+              targetSwiper.classList.add("active");
+            }
+          });
+        });
       });
     </script>
   </body>

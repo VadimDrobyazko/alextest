@@ -1,0 +1,236 @@
+.swiper {
+  width: 100%;
+
+  display: none;
+
+  z-index: 10;
+
+  &.active {
+    display: block;
+  }
+
+  &-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: content-box;
+  }
+
+  &-slide {
+    position: relative;
+    display: block;
+
+    width: 430px;
+    max-width: 480px !important;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+
+    @include onMobile {
+      height: 268px;
+    }
+
+    @include onTable {
+      height: 345px;
+    }
+
+    &:hover .swiper__overlay {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border: 1px solid #9a9a9a;
+      border-radius: 5px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 51px 32px;
+
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+
+    color: #ffffff;
+
+    text-align: center;
+    transition: opacity 0.3s ease;
+
+    &-name {
+      font-weight: 500;
+
+      font-size: 30px;
+      line-height: 34px;
+
+      padding: 0 0 10px;
+
+      @include onMobile {
+        font-size: 24px;
+        line-height: 28px;
+
+        padding: 0 0 7px;
+      }
+    }
+
+    &-position {
+      font-size: 24px;
+      line-height: 28px;
+
+      padding: 0 0 30px;
+
+      @include onMobile {
+        font-size: 20px;
+        line-height: 23px;
+
+        padding: 0 0 20px;
+      }
+    }
+
+    &-read {
+      background-color: $color-pink;
+    }
+  }
+
+  &-section {
+    grid-column: 4 / 13;
+    grid-row: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    @include onMobile {
+      grid-column: 1 / 7;
+
+      grid-row: 5;
+    }
+
+    @include onDesktop {
+      grid-column: 5 / 13;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: #9a9a9a;
+
+      @include onTable {
+        max-width: 1200px;
+      }
+
+      @include onDesktop {
+        max-width: 600px;
+      }
+
+      @include onDesign {
+        max-width: 1028px;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+
+      gap: 30px;
+
+      @include onMobile {
+        display: none;
+      }
+
+      @include onTable {
+        display: flex;
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+
+      background-color: $color-section;
+      border: 1px solid $color-border;
+
+      transition: all 0.3s ease-in-out;
+
+      &-disabled {
+        background-color: $color-white;
+
+        svg path {
+          fill-opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &-scroll {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $color-line;
+
+    @include onTable {
+      width: calc(100% - 172px);
+    }
+
+    &--active {
+      height: 7px;
+      background-color: $color-header-bg;
+    }
+  }
+}
+
+.swiper-scrollbar-drag {
+  height: 7px;
+  max-width: 25%;
+
+  border-radius: 1px;
+  background-color: $color-header-bg;
+}
+
+.swiper-button-disabled {
+  background-color: $color-white;
+
+  svg path {
+    fill-opacity: 0.5;
+  }
+}
+
+.swiper-slide.swiper-slide-active .swiper__overlay {
+  @include onMobile {
+    opacity: 1;
+  }
+}

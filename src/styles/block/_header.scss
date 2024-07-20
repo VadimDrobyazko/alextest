@@ -67,6 +67,8 @@
     transform: translate(-50%, -50%);
     z-index: 10;
 
+    width: 100%;
+
     border-radius: 7px;
 
     box-shadow: 0px 4px 4px 0px #32323226;
@@ -76,6 +78,10 @@
 
       inset: 81px 0 0 0;
       transform: translate(0);
+    }
+
+    @include onDesktop {
+      max-width: 1268px;
     }
 
     &-block {
@@ -92,15 +98,20 @@
       z-index: 6;
       text-align: center;
 
-      padding: 72px 46px;
-
       width: 100%;
-      max-width: 1268px;
 
       color: $color-white;
 
       @include onMobile {
         padding: 56px 15px;
+      }
+
+      @include onTable {
+        padding: 64px 38px;
+      }
+
+      @include onDesktop {
+        padding: 72px 46px;
       }
     }
 
@@ -114,12 +125,20 @@
 
   &__title {
     font-weight: 700;
-    font-size: 72px;
-    line-height: 83px;
 
     @include onMobile {
       font-size: 34px;
       line-height: 39px;
+    }
+
+    @include onTable {
+      font-size: 54px;
+      line-height: 44px;
+    }
+
+    @include onDesktop {
+      font-size: 72px;
+      line-height: 83px;
     }
   }
 
@@ -145,13 +164,19 @@
 
     gap: 60px;
 
-    padding: 160px 0 0;
-
     @include onMobile {
       flex-direction: column;
       gap: 30px;
 
       padding: 40px 0 0;
+    }
+
+    @include onTable {
+      padding: 20px 0 0;
+    }
+
+    @include onDesktop {
+      padding: 114px 0 0;
     }
   }
 }

@@ -94,6 +94,18 @@
       max-width: 284px;
     }
 
+    &:active {
+      background-color: $color-title;
+
+      span {
+        color: $color-white;
+      }
+
+      svg path {
+        fill: $color-white;
+      }
+    }
+
     &-span {
       font-weight: 400;
       font-size: 20px;
