@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const syncElement = document.querySelector(".sync-element");
 
   let currentSlide = 0;
-  const slideWidth = 75;
+  const slideWidth = 100;
 
   function updateSlider() {
     swiper.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
