@@ -15,11 +15,11 @@ if (swiperElArr.length) {
         slidesPerView: 1,
         spaceBetween: 20,
         navigation: {
-          nextEl: ".swiper-section-next",
-          prevEl: ".swiper-section-prev",
+          nextEl: swiperEl.querySelector(".swiper-section-next"),
+          prevEl: swiperEl.querySelector(".swiper-section-prev"),
         },
         scrollbar: {
-          el: ".swiper-scroll",
+          el: swiperEl.querySelector(".swiper-scroll"),
           draggable: true,
         },
         autoplay: {
@@ -59,47 +59,7 @@ if (swiperElArr.length) {
             slidesPerView: 3,
           },
         },
-        on: {
-          init: function () {
-            updateScrollbarWidth(this);
-          },
-          resize: function () {
-            updateScrollbarWidth(this);
-          },
-          slideChange: function () {
-            updateScrollbarWidth(this);
-          },
-          afterInit: function () {
-            updateScrollbarWidth(this);
-          },
-        },
       });
-
-      function updateScrollbarWidth(swiper) {
-        const totalSlides = swiper.slides.length;
-        if (totalSlides > 0) {
-          let slidesPerView = swiper.params.slidesPerView;
-
-          if (typeof slidesPerView === "object") {
-            const activeBreakpoint = Object.keys(swiper.params.breakpoints)
-              .reverse()
-              .find((breakpoint) => window.innerWidth >= breakpoint);
-            console.log(`Active Breakpoint: ${activeBreakpoint}`);
-            if (activeBreakpoint) {
-              slidesPerView =
-                swiper.params.breakpoints[activeBreakpoint].slidesPerView;
-            }
-          }
-
-          const scrollbar = swiper.scrollbar.el;
-          const scrollbarWidth = scrollbar.offsetWidth;
-          const dragWidth = scrollbarWidth * (slidesPerView / totalSlides);
-          scrollbar.style.setProperty(
-            "--scrollbar-drag-width",
-            `${dragWidth}px`
-          );
-        }
-      }
     }
   });
 }
