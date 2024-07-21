@@ -76,7 +76,7 @@ if (swiperElArr.length) {
       const scrollbarWidth = scrollbar.offsetWidth;
 
       const dragWidth = scrollbarWidth * (slidesPerView / totalSlides);
-      drag.style.width = `${dragWidth}px`;
+      drag.style.width = `'${dragWidth}px'`;
     }
   });
 }
