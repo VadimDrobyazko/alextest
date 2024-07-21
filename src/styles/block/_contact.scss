@@ -109,9 +109,7 @@
 
     &:hover {
       cursor: pointer;
-    }
 
-    &:active {
       background-color: $color-title;
 
       span {
@@ -120,6 +118,18 @@
 
       svg path {
         fill: $color-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-pink;
+
+      span {
+        color: $color-white;
+      }
+
+      svg path {
+        fill: $color-pink;
       }
     }
 

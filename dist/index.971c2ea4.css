@@ -969,7 +969,7 @@ a {
 }
 
 .card__img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: max-content;
 }
@@ -1085,10 +1085,19 @@ a {
 
 .contact__label:hover {
   cursor: pointer;
+  background-color: #101020;
+}
+
+.contact__label:hover span {
+  color: #fff;
+}
+
+.contact__label:hover svg path {
+  fill: #fff;
 }
 
 .contact__label:active {
-  background-color: #101020;
+  background-color: #ff0b53;
 }
 
 .contact__label:active span {
@@ -1096,7 +1105,7 @@ a {
 }
 
 .contact__label:active svg path {
-  fill: #fff;
+  fill: #ff0b53;
 }
 
 .contact__label-span {
@@ -1682,6 +1691,60 @@ a {
   .swiper-slide.swiper-slide-active .swiper__overlay:hover {
     opacity: 1;
   }
+}
+
+.choices {
+  border-radius: 7px;
+  width: 100%;
+  box-shadow: 0 1px 4px #00000026;
+  margin: 0 !important;
+  transition: all .5s ease-in-out !important;
+}
+
+.choices__inner {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  margin: 0;
+  transition: all .3s;
+  padding: 16px !important;
+}
+
+.choices__inner:focus {
+  box-shadow: 0 2px 10px #0000001a;
+}
+
+.choices__list {
+  margin: 0;
+  padding: 0;
+}
+
+.choices__list--dropdown.is-active {
+  border-radius: 7px;
+  border: inherit !important;
+  box-shadow: 0 1px 4px #00000026 !important;
+}
+
+.choices__item {
+  opacity: 1;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #585858 !important;
+}
+
+.choices__item--choice {
+  font-weight: 400;
+  padding: 16px !important;
+}
+
+.choices__item--choice.is-selected {
+  color: #ff0b53;
+}
+
+.choices__item--disabled {
+  font-weight: 400;
+  color: #ff0b53 !important;
 }
 
 html {
