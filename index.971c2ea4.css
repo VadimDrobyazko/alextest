@@ -1605,6 +1605,7 @@ a {
 }
 
 .swiper-scroll {
+  --scrollbar-drag-width: 0px;
   background-color: #676767;
   align-items: center;
   width: 100%;
@@ -1624,6 +1625,7 @@ a {
 }
 
 .swiper-scrollbar-drag {
+  width: var(--scrollbar-drag-width);
   background-color: #17191d;
   border-radius: 1px;
   height: 7px;
