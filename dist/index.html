@@ -533,7 +533,7 @@
 
               <input type="email" class="contact__input contact__input-email" placeholder="Email Address" required="" data-aos="fade-up" data-aos-duration="1200">
 
-              <input type="number" class="contact__input contact__input-phone" placeholder="Phone Number" required="" data-aos="fade-up" data-aos-duration="1400">
+              <input type="tel" class="contact__input contact__input-phone" placeholder="Phone Number" required="" data-aos="fade-up" data-aos-duration="1400" oninput="/^[0-9]+$/.test(this.value) ? this.value : this.value = this.value.replace(/[^0-9]/g, '')">
 
               <select name="" id="" class="contact__input contact__input-select" data-aos="fade-up" data-aos-duration="1500">
                 <option value="" class="contact__option">

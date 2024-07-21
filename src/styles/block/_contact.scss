@@ -69,6 +69,19 @@
   &__textarea {
     height: 193px;
     min-width: 100%;
+
+    font-family: "Ubuntu";
+
+    font-weight: 300 !important;
+
+    font-size: 16px;
+    line-height: 23px;
+
+    box-shadow: 0px 1px 4px 0px #00000026;
+
+    &::placeholder {
+      color: $color-input;
+    }
   }
 
   &__label {
