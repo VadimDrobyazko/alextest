@@ -232,4 +232,12 @@
   @include onMobile {
     opacity: 1;
   }
+
+  @include onTable {
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
