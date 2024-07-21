@@ -61,6 +61,11 @@
     text-transform: uppercase;
 
     color: $color-white;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $color-pink;
+    }
   }
 
   &__picture {
@@ -85,6 +90,16 @@
     margin: auto 0 0;
 
     gap: 25px;
+
+    &-link {
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        svg path {
+          fill: $color-pink;
+        }
+      }
+    }
 
     &-list {
       display: flex;

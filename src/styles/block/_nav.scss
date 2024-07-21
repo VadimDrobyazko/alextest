@@ -35,6 +35,9 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
     &:hover {
       color: $color-pink;
     }

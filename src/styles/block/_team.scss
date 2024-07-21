@@ -132,6 +132,10 @@
       font-weight: 500;
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &::before {
       content: "";
       position: absolute;
