@@ -198,6 +198,7 @@
     height: 1px;
 
     background-color: $color-line;
+    --scrollbar-drag-width: 0px;
 
     @include onTable {
       width: calc(100% - 172px);
@@ -212,9 +213,11 @@
 
 .swiper-scrollbar-drag {
   height: 7px;
-
   border-radius: 1px;
+
   background-color: $color-header-bg;
+
+  width: var(--scrollbar-drag-width);
 }
 
 .swiper-button-disabled {
