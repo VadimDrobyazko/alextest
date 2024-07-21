@@ -202,13 +202,13 @@ a {
 
 .header__middle {
   z-index: 10;
+  filter: drop-shadow(0 4px 4px #32323226);
   border-radius: 7px;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 4px 4px #32323226;
 }
 
 @media (width >= 375px) and (width <= 1200px) {
