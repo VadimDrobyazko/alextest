@@ -1645,6 +1645,16 @@ a {
   }
 }
 
+@media (width >= 768px) {
+  .swiper-slide.swiper-slide-active .swiper__overlay {
+    opacity: 0;
+  }
+
+  .swiper-slide.swiper-slide-active .swiper__overlay:hover {
+    opacity: 1;
+  }
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
