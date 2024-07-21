@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+    <link rel="icon" href="/favicon.94570404.ico" type="image/x-icon">
     <link rel="stylesheet" href="/index.971c2ea4.css">
     <script src="/index.b8fca702.js" defer=""></script>
     <title>Testing</title>
@@ -590,28 +593,30 @@
               Contact Us
             </div>
 
-            <form action="/" class="contact__form" method="post" id="form" data-aos="fade-up" data-aos-duration="1200">
-              <input type="text" class="contact__input contact__input-name" placeholder="Your Name" required="" data-aos="fade-up" data-aos-duration="1000">
+            <form action="/" class="contact__form" method="post" id="form">
+              <input type="text" class="contact__input contact__input-name" placeholder="Your Name" required="">
 
-              <input type="email" class="contact__input contact__input-email" placeholder="Email Address" required="" data-aos="fade-up" data-aos-duration="1200">
+              <input type="email" class="contact__input contact__input-email" placeholder="Email Address" required="">
 
-              <input type="tel" class="contact__input contact__input-phone" placeholder="Phone Number" required="" data-aos="fade-up" data-aos-duration="1400" oninput="/^[0-9]+$/.test(this.value) ? this.value : this.value = this.value.replace(/[^0-9]/g, '')">
+              <input type="tel" class="contact__input contact__input-phone" placeholder="Phone Number" required="" oninput="/^[0-9]+$/.test(this.value) ? this.value : this.value = this.value.replace(/[^0-9]/g, '')">
 
-              <select name="" id="" class="contact__input contact__input-select" data-aos="fade-up" data-aos-duration="1500">
-                <option value="" class="contact__option">
+              <select name="" id="" class="contact__input contact__input-select">
+                <option value="" class="contact__option" selected="" disabled="">
                   Choose your job type
                 </option>
 
-                <option value="" class="contact__option">
-                  Choose your job type
+                <option value="HR Manager" class="contact__option">
+                  HR Manager
                 </option>
 
-                <option value="" class="contact__option">
-                  Choose your job type
+                <option value="Front-End" class="contact__option">
+                  Front-End
                 </option>
+
+                <option value="Backend" class="contact__option">Backend</option>
               </select>
 
-              <textarea name="" id="" class="contact__textarea contact__input" placeholder="Message" data-aos="fade-up" data-aos-duration="1700"></textarea>
+              <textarea name="" id="" class="contact__textarea contact__input" placeholder="Message"></textarea>
 
               <label for="file" class="contact__label" data-aos="fade-up" data-aos-duration="1900">
                 <svg class="contact__label-img" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -847,6 +852,8 @@
       </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js" defer=""></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script>document.addEventListener("DOMContentLoaded", ()=>{
     AOS.init();
 });
